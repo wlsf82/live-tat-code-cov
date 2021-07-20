@@ -1,5 +1,7 @@
 # Live TAT Code Coverage
 
+![Test status](https://github.com/wlsf82/live-tat-code-cov/actions/workflows/main.yml/badge.svg)
+
 Sample project created using create-react-app to demonstrate how to extract code coverage report while running end-to-end tests with Cypress.
 
 ## Installation
