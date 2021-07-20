@@ -10,8 +10,10 @@
   "scripts": {
     "start": "react-scripts -r @cypress/instrument-cra start",
     "build": "react-scripts build",
+    "e2e": "start-test 3000",
     "pretest": "rm -rf .nyc_output coverage",
-    "test": "cypress run && nyc report",
+    "test": "cypress run",
+    "posttest": "nyc report",
     "cy:open": "cypress open",
     "coverage": "open coverage/lcov-report/index.html"
   },
@@ -41,6 +43,8 @@
   "devDependencies": {
     "@cypress/code-coverage": "^3.9.9",
     "@cypress/instrument-cra": "^1.4.0",
-    "cypress": "^8.0.0"
-  }
+    "cypress": "^8.0.0",
+    "start-server-and-test": "^1.12.6"
+  },
+  "license": "MIT"
 }
