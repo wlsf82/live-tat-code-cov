@@ -8,8 +8,18 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build"
+    "start": "react-scripts -r @cypress/instrument-cra start",
+    "build": "react-scripts build",
+    "pretest": "rm -rf .nyc_output coverage",
+    "test": "cypress run && nyc report",
+    "cy:open": "cypress open",
+    "coverage": "open coverage/lcov-report/index.html"
+  },
+  "nyc": {
+    "exclude": [
+      "src/reportWebVitals.js"
+    ],
+    "excludeAfterRemap": true
   },
   "eslintConfig": {
     "extends": [
@@ -27,5 +37,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@cypress/code-coverage": "^3.9.9",
+    "@cypress/instrument-cra": "^1.4.0",
+    "cypress": "^8.0.0"
   }
 }
