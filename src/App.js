@@ -2,12 +2,12 @@ import React from 'react'
 import './App.css'
 
 function App() {
-  const [isTextInputvisible, setIsTextInputvisible] = React.useState(false)
+  const [isTextInputVisible, setIsTextInputVisible] = React.useState(false)
   const [isParagraphVisible, setIsParagraphVisible] = React.useState(false)
   const [paragraphText, setParagraphText] = React.useState('')
 
   const handleClick = () => {
-    setIsTextInputvisible(true)
+    setIsTextInputVisible(true)
   }
 
   const handleChange = (event) => {
@@ -24,7 +24,7 @@ function App() {
       <h1>Live TAT Code Coverage</h1>
       <button onClick={handleClick}>Start</button>
 
-      { isTextInputvisible && <input type="text" placeholder="Find the easter egg" onChange={handleChange} /> }
+      { isTextInputVisible && <input type="text" placeholder="Find the easter egg" onChange={handleChange} /> }
       { isParagraphVisible && <p>{paragraphText}</p> }
     </div>
   )
