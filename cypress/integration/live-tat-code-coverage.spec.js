@@ -23,7 +23,7 @@ describe('Live TAT Code Coverage', () => {
 
     cy.contains('p', 'Congrats, you found it!')
       .should('be.visible')
-    cy.contains('button', 'Reset')
+    cy.root().contains('button', 'Reset')
       .as('resetBtn')
       .should('be.visible')
 
